@@ -1,6 +1,6 @@
-This is [Cake-jolt](https://cake-jolt.vercel.app) project created with [`Next.js 13 && OpenAi`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is [Cake Jolt](https://cake-jolt.vercel.app) project created with [`Next.js 13 && OpenAi`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 
-## Cake-jolt Project
+## Cake Jolt Open Project
 
 First, run the development server:
 
