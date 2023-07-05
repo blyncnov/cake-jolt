@@ -1,9 +1,16 @@
 import React from "react";
 
+//=> NavBar
+import NavBar from "@/components/NavBar";
+import Hero from "@/components/Hero";
+import Quote from "@/components/Quote";
+
 export default function Home() {
   return (
     <>
-      <h1>Home Page</h1>
+      <NavBar />
+      <Hero />
+      <Quote />
     </>
   );
 }

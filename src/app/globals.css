@@ -18,7 +18,7 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   min-height: 100vh;
@@ -32,4 +32,15 @@ body {
   scroll-behavior: smooth !important;
   background-color: rgb(255, 255, 255);
   -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  width: auto;
+  display: flex;
+  gap: 12px;
+  color: aliceblue;
+  border-radius: 3px;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #000;
 }
