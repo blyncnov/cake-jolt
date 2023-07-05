@@ -22,7 +22,7 @@ const Hero = ({ setWishing }: any) => {
     <>
       <section className="w-full relative">
         <div className="w-full max-w-[1200px] xl:px-0 px-4 mx-auto">
-          <div className="py-[50px] text-center">
+          <div className="py-[60px] text-center">
             <h1 className="skew-y-2 transform-gpu text-6xl">
               Give a{" "}
               <span className="p-1 bg-[#FAC033] rounded-sm font-semibold">
