@@ -12,7 +12,12 @@ import Confetti2 from "@/assets/confetti-2.svg";
 import Confetti3 from "@/assets/balloons.svg";
 import Confetti4 from "@/assets/garlands.svg";
 
-const Hero = () => {
+const Hero = ({ setWishing }: any) => {
+  // Open Prompt
+  const OpenModalHandler = () => {
+    setWishing(true);
+  };
+
   return (
     <>
       <section className="w-full relative">
@@ -31,7 +36,7 @@ const Hero = () => {
               <span className="text-[#5AE2E3] font-extrabold">birthday.</span>{" "}
             </h1>
             <div className="button-actions flex md:flex-row flex-col my-[30px] gap-4 justify-center items-center">
-              <button className="py-4 px-6 ">
+              <button className="py-4 px-6 " onClick={OpenModalHandler}>
                 Send a jolt <SiGamejolt />
               </button>
               <Link href="https://github.com/blyncnov/cake-jolt/fork">

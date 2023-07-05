@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 //=> NavBar
@@ -8,15 +10,16 @@ import Footer from "@/components/Footer";
 import CreationModal from "@/components/Modal";
 
 export default function Home() {
+  const [wishing, setWishing] = React.useState(false);
   return (
     <>
       <NavBar />
-      <Hero />
+      <Hero setWishing={setWishing} />
       <Quote />
       <Footer />
 
       {/* Create Jolt Modal */}
-      {/* <CreationModal /> */}
+      {wishing && <CreationModal setWishing={setWishing} />}
     </>
   );
 }
