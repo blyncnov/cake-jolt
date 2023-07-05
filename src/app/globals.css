@@ -77,6 +77,15 @@ button {
   left: 20% !important;
 }
 
+.creation_modal {
+  background-color: rgba(0, 0, 0, 0.766) !important;
+}
+
+.creation_modal_container {
+  border: 2px solid #fabf33;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 @media (max-width: 768px) {
   .confetti img {
     width: 60px;
@@ -99,6 +108,6 @@ button {
 
   .confetti_4 {
     bottom: 15%;
-    left: 2% !important;
+    left: 5% !important;
   }
 }

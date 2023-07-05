@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
+// React Icons
+import { BiSolidStar } from "react-icons/bi";
+
 const NavBar = () => {
   return (
     <section className="w-full border-b">
@@ -28,7 +31,11 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="btn-action">
-            <button className="btn btn-primary">Sponsor Us</button>
+            <Link href="https://github.com/blyncnov/cake-jolt">
+              <button className="btn btn-primary">
+                GitHub <BiSolidStar />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

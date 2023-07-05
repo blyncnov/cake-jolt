@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 //=> React Icons
 import { SiGamejolt } from "react-icons/si";
-import { GoSponsorTiers } from "react-icons/go";
+import { TbGitFork } from "react-icons/tb";
 
 //=> Confettti
 import Confetti from "@/assets/confetti-1.svg";
@@ -27,15 +28,18 @@ const Hero = () => {
               to your{" "}
               <span className="text-[#F73776] font-semibold">loved</span> one on
               their{" "}
-              <span className="text-[#5AE2E3] font-semibold">birthday.</span>{" "}
+              <span className="text-[#5AE2E3] font-extrabold">birthday.</span>{" "}
             </h1>
             <div className="button-actions flex md:flex-row flex-col my-[30px] gap-4 justify-center items-center">
               <button className="py-4 px-6 ">
                 Send a jolt <SiGamejolt />
               </button>
-              <button className="py-4 px-6 hidden md:flex bg-[#F73776]">
-                Sponsor Us <GoSponsorTiers />
-              </button>
+              <Link href="https://github.com/blyncnov/cake-jolt/fork">
+                <button className="py-4 px-6 hidden md:flex bg-[#F73776]">
+                  Fork Repository
+                  <TbGitFork />
+                </button>
+              </Link>
             </div>
           </div>
           <div className="confetti confetti_1 ">
