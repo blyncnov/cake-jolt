@@ -8,9 +8,11 @@ import Hero from "@/components/Hero";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
 import CreationModal from "@/components/Modal";
+import SucessModal from "@/components/Modal/sucess";
 
 export default function Home() {
   const [wishing, setWishing] = React.useState(false);
+  const [Success, setSuccess] = React.useState(false);
   return (
     <>
       <NavBar />
@@ -19,7 +21,12 @@ export default function Home() {
       <Footer />
 
       {/* Create Jolt Modal */}
-      {wishing && <CreationModal setWishing={setWishing} />}
+      {wishing && (
+        <CreationModal setWishing={setWishing} setSuccess={setSuccess} />
+      )}
+
+      {/* Success  Modal */}
+      {Success && <SucessModal setSuccess={setSuccess} />}
     </>
   );
 }

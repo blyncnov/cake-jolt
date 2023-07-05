@@ -4,15 +4,16 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { SiGamejolt } from "react-icons/si";
 
-const CreationModal = ({ setWishing }: any) => {
-  // Generate a Wish
+const CreationModal = ({ setWishing, setSuccess }: any) => {
+  //=> Generate a Wish
   const WishHandler = () => {
-    // Generate
-    // Close Modal After
+    //=> Generate
+    setSuccess(true);
+    //=> Close Modal After
     setWishing(false);
   };
 
-  // Close Prompt
+  //=>Close Prompt
   const CloseModalHandler = () => {
     setWishing(false);
   };
@@ -30,7 +31,11 @@ const CreationModal = ({ setWishing }: any) => {
           />
         </div>
         <div className="w-full">
-          <form className="w-full flex gap-4 items-start flex-col p-4 ">
+          <form
+            method="POST"
+            className="w-full flex gap-4 items-start flex-col p-4 "
+            onSubmit={WishHandler}
+          >
             <input
               type="text"
               name="Name"
@@ -43,7 +48,7 @@ const CreationModal = ({ setWishing }: any) => {
               placeholder="Celebrant Email Address"
             />
             <select name="category">
-              <option value="choose">Choose Mood</option>
+              <option value="beautiful">Choose Mood</option>
               <option value="happy">Happy</option>
               <option value="sad">Sad </option>
               <option value="lazy">Lazy </option>
@@ -53,14 +58,12 @@ const CreationModal = ({ setWishing }: any) => {
             <input
               type="number"
               name="phone_number"
-              maxLength={12}
-              max={12}
               placeholder="Celebrant Phone Number"
             />
             <textarea name="prompt" placeholder="Enter Your Prompt" required />
             <div className="w-full">
               <button className="w-full text-center justify-center p-4">
-                Jolt <SiGamejolt />
+                Send Jolt <SiGamejolt />
               </button>
             </div>
           </form>
