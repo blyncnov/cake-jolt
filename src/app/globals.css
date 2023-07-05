@@ -39,7 +39,7 @@ button {
   display: flex;
   gap: 12px;
   color: aliceblue;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   align-items: center;
   padding: 12px 24px;
@@ -52,7 +52,7 @@ select {
   width: 100% !important;
   font-size: 14px;
   font-weight: 400;
-  padding: 18px;
+  padding: 18px 14px;
   display: block;
   outline: none;
   white-space: nowrap;
@@ -114,7 +114,7 @@ input::placeholder {
 
 .creation_modal_container {
   border: 2px solid #dddddd;
-  border-radius: 1px;
+  border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 

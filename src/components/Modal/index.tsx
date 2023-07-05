@@ -39,7 +39,7 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
             <input
               type="text"
               name="Name"
-              placeholder="Celebrant Name"
+              placeholder="Celebrant Name/Nickname"
               required
             />
             <input
@@ -48,7 +48,7 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
               placeholder="Celebrant Email Address"
             />
             <select name="category">
-              <option value="beautiful">Choose Mood</option>
+              <option value="beautiful">Choose Your Mood</option>
               <option value="happy">Happy</option>
               <option value="sad">Sad </option>
               <option value="lazy">Lazy </option>
@@ -58,9 +58,13 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
             <input
               type="number"
               name="phone_number"
-              placeholder="Celebrant Phone Number"
+              placeholder="Celebrant Phone Numbe (Optional)"
             />
-            <textarea name="prompt" placeholder="Enter Your Prompt" required />
+            <textarea
+              name="prompt"
+              placeholder="Enter Your Prompt Keywords"
+              required
+            />
             <div className="w-full">
               <button className="w-full text-center justify-center p-4">
                 Send Jolt <SiGamejolt />
