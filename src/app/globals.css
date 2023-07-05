@@ -44,3 +44,61 @@ button {
   padding: 12px 24px;
   background-color: #000;
 }
+
+.confetti {
+  position: absolute;
+}
+
+.confetti img {
+  width: 80px;
+}
+
+.confetti_1 {
+  top: 5%;
+  left: 28% !important;
+}
+
+.confetti_2 {
+  top: 8%;
+  right: 23% !important;
+}
+
+.confetti_3 {
+  bottom: 5%;
+  right: 2% !important;
+}
+
+.confetti_3 img {
+  width: 200px;
+}
+
+.confetti_4 {
+  bottom: 8%;
+  left: 20% !important;
+}
+
+@media (max-width: 768px) {
+  .confetti img {
+    width: 60px;
+  }
+
+  .confetti_1 {
+    top: 4%;
+    left: 2% !important;
+  }
+
+  .confetti_2 {
+    top: 3%;
+    right: 3% !important;
+  }
+
+  .confetti_3 {
+    bottom: 35%;
+    right: 2% !important;
+  }
+
+  .confetti_4 {
+    bottom: 15%;
+    left: 2% !important;
+  }
+}
