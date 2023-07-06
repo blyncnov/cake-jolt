@@ -1,5 +1,6 @@
 // CSS Style Definitions
 import "./globals.css";
+import "./preview.scss";
 
 export const metadata = {
   title: "Cake-jolt | A special birthday reminder app",

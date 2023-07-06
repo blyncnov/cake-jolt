@@ -39,27 +39,19 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
             <input
               type="text"
               name="Name"
-              placeholder="Celebrant Name/Nickname"
+              placeholder="Celebrant Name or Nickname"
               required
             />
-            <input
-              type="text"
-              name="Email"
-              placeholder="Celebrant Email Address"
-            />
+
             <select name="category">
-              <option value="beautiful">Choose Your Mood</option>
+              <option value="beautiful">Choose Engery</option>
               <option value="happy">Happy</option>
               <option value="sad">Sad </option>
               <option value="lazy">Lazy </option>
               <option value="cranky">Cranky </option>
               <option value="anxious">Anxious </option>
             </select>
-            <input
-              type="number"
-              name="phone_number"
-              placeholder="Celebrant Phone Numbe (Optional)"
-            />
+
             <textarea
               name="prompt"
               placeholder="Enter Your Prompt Keywords"

@@ -112,10 +112,18 @@ input::placeholder {
   background-color: rgba(0, 0, 0, 0.766) !important;
 }
 
-.creation_modal_container {
+.creation_modal_container,
+.sucess_creation_modal_container {
   border: 2px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.sucess_creation_modal_container {
+  height: 600px;
+  min-height: 600px;
+  max-height: 600px;
+  overflow: scroll;
 }
 
 @media (max-width: 768px) {
