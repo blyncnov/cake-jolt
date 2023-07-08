@@ -19,9 +19,7 @@ const Preview: () => React.JSX.Element = () => {
       <div className="birthdayCard">
         <div className="cardFront">
           <div className="happy">
-            <marquee behavior="scroll" scrollamount="8" direction="left">
-              Wishing you a beautiful day and a special birthday !!!!{" "}
-            </marquee>
+            <div>Wishing you a beautiful day and a special birthday !!!! </div>
           </div>
           <div className="balloons">
             <div className="balloon-1"></div>
