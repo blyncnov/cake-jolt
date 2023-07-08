@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const Preview: () => React.JSX.Element = () => {
   // Toggle State
-  const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
+  // const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
 
   return (
     <div id="card_body">
