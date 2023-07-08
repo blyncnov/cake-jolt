@@ -1,9 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import Ticker from "react-ticker";
 
 // Redux
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const Preview: () => React.JSX.Element = () => {
   // Toggle State
@@ -20,15 +19,9 @@ const Preview: () => React.JSX.Element = () => {
       <div className="birthdayCard">
         <div className="cardFront">
           <div className="happy">
-            <Ticker offset={100}>
-              {() => (
-                <>
-                  <div>
-                    Wishing you a beautiful day and a special birthday !!!!{" "}
-                  </div>
-                </>
-              )}
-            </Ticker>
+            <marquee behavior="scroll" scrollamount="8" direction="left">
+              Wishing you a beautiful day and a special birthday !!!!{" "}
+            </marquee>
           </div>
           <div className="balloons">
             <div className="balloon-1"></div>
