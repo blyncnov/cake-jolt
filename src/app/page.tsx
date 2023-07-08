@@ -8,11 +8,30 @@ import Hero from "@/components/Hero";
 import Quote from "@/components/Quote";
 import Footer from "@/components/Footer";
 import CreationModal from "@/components/Modal";
-import SucessModal from "@/components/Modal/sucess";
+import SucessModal from "@/components/Modal/preview";
+
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { CLOSE } from "@/store/actions/action";
 
 export default function Home() {
+  const dispatch = useDispatch();
+
   const [wishing, setWishing] = React.useState(false);
   const [Success, setSuccess] = React.useState(false);
+
+  // Toggle State
+  const ToggleState = useSelector(
+    (state: any) => state.ModeReducer.isSideBarOpen
+  );
+
+  console.log(ToggleState);
+
+  const CloseSidebar = () => {
+    // Do This Action
+    dispatch({ type: CLOSE });
+  };
+
   return (
     <>
       <NavBar />

@@ -1,7 +1,13 @@
 import Head from "next/head";
 import React from "react";
 
-const Preview = () => {
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+
+const Preview: () => React.JSX.Element = () => {
+  // Toggle State
+  const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
+
   return (
     <div id="card_body">
       <Head>
@@ -12,23 +18,24 @@ const Preview = () => {
 
       <div className="birthdayCard">
         <div className="cardFront">
-          <h3 className="happy">HAPPY BIRTHDAY</h3>
+          <div className="happy">
+            <marquee behavior="scroll" scrollamount="8" direction="left">
+              Wishing you a beautiful day and a special birthday !!!!{" "}
+            </marquee>
+          </div>
           <div className="balloons">
             <div className="balloon-1"></div>
             <div className="balloon-2"></div>
             <div className="balloon-3"></div>
             <div className="balloon-4"></div>
+            <div className="balloon-5"></div>
           </div>
         </div>
         <div className="cardInside">
-          <h3 className="back">HAPPY BIRTHDAY</h3>
-          <p className="preview_text">Dear Friend,</p>
-          <p className="preview_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            expedita debitis esse quaerat adipisci iste illum placeat incidunt
-            reprehenderit laudantium!
-          </p>
-          <p className="name">Jeremytechie</p>
+          <h3 className="back">SPECIAL BIRTHDAY ❤️ </h3>
+          <p className="preview_text">Heyy There,</p>
+          <p className="preview_text">{CardInfo.message}</p>
+          <p className="name">{CardInfo.sender}</p>
         </div>
       </div>
     </div>

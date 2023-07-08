@@ -114,7 +114,7 @@ input::placeholder {
 
 .creation_modal_container,
 .sucess_creation_modal_container {
-  border: 2px solid #dddddd;
+  border: 1px solid #bdb8b835;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -124,6 +124,15 @@ input::placeholder {
   min-height: 600px;
   max-height: 600px;
   overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 @media (max-width: 768px) {

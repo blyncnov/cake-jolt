@@ -6,7 +6,19 @@ import { SiGamejolt } from "react-icons/si";
 
 const CreationModal = ({ setWishing, setSuccess }: any) => {
   //=> Generate a Wish
-  const WishHandler = () => {
+  const WishHandler = (e: any) => {
+    e.preventDefault();
+
+    let CelebrantName = e.target.celebrant_name.value;
+    let Category = e.target.category.value;
+    let Prompts = e.target.prompt.value;
+
+    if (!CelebrantName || !Prompts || !Category) {
+      return;
+    }
+
+    console.log(CelebrantName, Category, Prompts);
+
     //=> Generate
     setSuccess(true);
     //=> Close Modal After
@@ -38,7 +50,7 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
           >
             <input
               type="text"
-              name="Name"
+              name="celebrant_name"
               placeholder="Celebrant Name or Nickname"
               required
             />
