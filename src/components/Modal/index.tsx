@@ -21,6 +21,7 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
 
     //=> Generate
     setSuccess(true);
+
     //=> Close Modal After
     setWishing(false);
   };

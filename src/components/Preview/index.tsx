@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const Preview: () => React.JSX.Element = () => {
   // Toggle State
-  // const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
+  const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
 
   return (
     <div id="card_body">
@@ -19,7 +19,7 @@ const Preview: () => React.JSX.Element = () => {
       <div className="birthdayCard">
         <div className="cardFront">
           <div className="happy">
-            <div>Wishing you a beautiful day and a special birthday !!!! </div>
+            <div>A Surprise</div>
           </div>
           <div className="balloons">
             <div className="balloon-1"></div>

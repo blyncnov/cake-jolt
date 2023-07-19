@@ -12,12 +12,21 @@ const SucessModal = ({ setSuccess }: any) => {
     setSuccess(false);
   };
 
+  //=> Send to celebrant
+  const SenderHandler = (e: any) => {
+    e.preventDefault();
+
+    let phone_number = e.target.phone_number.value;
+
+    console.log(phone_number);
+  };
+
   return (
     <div className="creation_modal fixed top-0 left-0 right-0 h-full flex items-center justify-center">
       <div className="sucess_creation_modal_container bg-white md:w-[40%] w-[90%]">
         <div className="top flex items-center justify-between border-b  p-4 ">
           <h1 className="font-medium flex items-start justify-start gap-1">
-            Thank You!!!!
+            Preview!!!!
           </h1>
           <FaTimes
             onClick={CloseModalHandler}
@@ -32,13 +41,13 @@ const SucessModal = ({ setSuccess }: any) => {
             <form
               method="POST"
               className="w-full flex gap-4 items-start flex-col p-4 "
-              onSubmit={() => {}}
+              onSubmit={SenderHandler}
             >
-              <input
+              {/* <input
                 type="text"
-                name="Email"
+                name="email_address"
                 placeholder="Celebrant Email Address"
-              />
+              /> */}
 
               <input
                 type="number"
