@@ -10,7 +10,7 @@ const InitialState = {
   isPromptModal: false,
   isSucessModal: false,
   celebrant: "",
-  birthdayMessage: "Home",
+  birthdayMessage: "",
   sender: "Cake-Jolt",
 };
 

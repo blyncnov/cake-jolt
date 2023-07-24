@@ -79,7 +79,6 @@ const CreationModal = () => {
               type="text"
               name="celebrant_name"
               placeholder="Celebrant Name or Nickname"
-              defaultValue="example"
               required
             />
 
@@ -95,7 +94,6 @@ const CreationModal = () => {
             <textarea
               name="prompt"
               placeholder="Enter Your Prompt Keywords"
-              defaultValue="example"
               required
             />
             <div className="w-full">
