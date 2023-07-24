@@ -1,10 +1,16 @@
-import { IS_PROMPT, IS_SUCCESS, CLOSE_MODAL } from "../actions/action";
+import {
+  IS_PROMPT,
+  IS_SUCCESS,
+  CLOSE_MODAL,
+  SET_BIRTHDAY_MESSAGE,
+  SET_CELEBRANT_NAME,
+} from "../actions/action";
 
 const InitialState = {
   isPromptModal: false,
   isSucessModal: false,
-  birthdayMessage:
-    "Hope all your birthday wishes come true!” “It's your special day — May your day be filled with joy, reflection, and hope for the year ahead, and may He continue to bless you and watch over you all the days of your life.",
+  celebrant: "",
+  birthdayMessage: "Home",
   sender: "Cake-Jolt",
 };
 
@@ -20,6 +26,18 @@ export const modeReducers = (state = InitialState, action: any) => {
       return {
         ...state,
         isSucessModal: !state.isSucessModal,
+      };
+
+    case SET_BIRTHDAY_MESSAGE:
+      return {
+        ...state,
+        birthdayMessage: action.payload,
+      };
+
+    case SET_CELEBRANT_NAME:
+      return {
+        ...state,
+        celebrant: action.payload,
       };
 
     case CLOSE_MODAL:

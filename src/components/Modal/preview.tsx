@@ -6,14 +6,14 @@ import { FaTimes } from "react-icons/fa";
 //=> React Componnets
 import Preview from "@/components/Preview";
 
-// Redux
+//=> Redux
 import { useDispatch } from "react-redux";
 import { IS_SUCCESS } from "@/store/actions/action";
 
 const SucessModal = () => {
   const dispatch = useDispatch();
 
-  // Close Prompt
+  //=> Close Prompt
   const CloseModalHandler = () => {
     dispatch({ type: IS_SUCCESS });
   };

@@ -1,19 +1,21 @@
 import React from "react";
 import Head from "next/head";
 
-// Redux
+//=> Redux
 import { useSelector } from "react-redux";
 
 const Preview = () => {
-  // Card Info
-  const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
-
-  // Birthday Message
+  //=> Birthday Message
   const birthday_message = useSelector(
     (state: any) => state.ModeReducer.birthdayMessage
   );
 
-  // Sender
+  //=> Celebrant Name
+  const CelebrantName = useSelector(
+    (state: any) => state.ModeReducer.celebrant
+  );
+
+  //=> Sender
   const sender = useSelector((state: any) => state.ModeReducer.sender);
 
   return (
@@ -39,7 +41,7 @@ const Preview = () => {
         </div>
         <div className="cardInside">
           <h3 className="back">SPECIAL BIRTHDAY ❤️ </h3>
-          <p className="preview_text">Heyy There,</p>
+          <p className="preview_text">Heyy {CelebrantName},</p>
           <p className="preview_text">{birthday_message}</p>
           <p className="name">{sender}</p>
         </div>
