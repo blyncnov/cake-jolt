@@ -4,7 +4,13 @@ import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { SiGamejolt } from "react-icons/si";
 
-const CreationModal = ({ setWishing, setSuccess }: any) => {
+// Redux
+import { useDispatch } from "react-redux";
+import { IS_PROMPT, IS_SUCCESS, CLOSE_MODAL } from "@/store/actions/action";
+
+const CreationModal = () => {
+  const dispatch = useDispatch();
+
   //=> Generate a Wish
   const WishHandler = (e: any) => {
     e.preventDefault();
@@ -20,15 +26,15 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
     console.log(CelebrantName, Category, Prompts);
 
     //=> Generate
-    setSuccess(true);
+    dispatch({ type: IS_SUCCESS });
 
     //=> Close Modal After
-    setWishing(false);
+    dispatch({ type: IS_PROMPT });
   };
 
   //=>Close Prompt
   const CloseModalHandler = () => {
-    setWishing(false);
+    dispatch({ type: CLOSE_MODAL });
   };
 
   return (
@@ -53,6 +59,7 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
               type="text"
               name="celebrant_name"
               placeholder="Celebrant Name or Nickname"
+              defaultValue="example"
               required
             />
 
@@ -68,6 +75,7 @@ const CreationModal = ({ setWishing, setSuccess }: any) => {
             <textarea
               name="prompt"
               placeholder="Enter Your Prompt Keywords"
+              defaultValue="example"
               required
             />
             <div className="w-full">

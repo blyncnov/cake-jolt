@@ -11,19 +11,18 @@ import CreationModal from "@/components/Modal";
 import SucessModal from "@/components/Modal/preview";
 
 // Redux
-import { useDispatch, useSelector } from "react-redux";
-import { CLOSE } from "@/store/actions/action";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  const [wishing, setWishing] = React.useState(false);
-  const [Success, setSuccess] = React.useState(false);
+  // Prompt Modal State
+  const is_prompt_state = useSelector(
+    (state: any) => state.ModeReducer.isPromptModal
+  );
 
-  // Toggle State
-  // const ToggleState = useSelector(
-  //   (state: any) => state.ModeReducer.isSideBarOpen
-  // );
-
-  // console.log(ToggleState);
+  // Prompt Modal State
+  const is_sucess_state = useSelector(
+    (state: any) => state.ModeReducer.isSucessModal
+  );
 
   const CloseSidebar = () => {
     // Do This Action
@@ -32,17 +31,15 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <Hero setWishing={setWishing} />
+      <Hero />
       <Quote />
       <Footer />
 
       {/* Create Jolt Modal */}
-      {wishing && (
-        <CreationModal setWishing={setWishing} setSuccess={setSuccess} />
-      )}
+      {is_prompt_state && <CreationModal />}
 
       {/* Success  Modal */}
-      {Success && <SucessModal setSuccess={setSuccess} />}
+      {is_sucess_state && <SucessModal />}
     </>
   );
 }

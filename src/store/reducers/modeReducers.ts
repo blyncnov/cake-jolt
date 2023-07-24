@@ -1,8 +1,8 @@
-import { TOGGLE_SIDEBAR, CLOSE, SHOW_MODAL } from "../actions/action";
+import { IS_PROMPT, IS_SUCCESS, CLOSE_MODAL } from "../actions/action";
 
 const InitialState = {
-  isSideBarOpen: false,
-  isModalOpen: false,
+  isPromptModal: false,
+  isSucessModal: false,
   CardInfo: {
     message:
       "Hope all your birthday wishes come true!” “It's your special day — May your day be filled with joy, reflection, and hope for the year ahead, and may He continue to bless you and watch over you all the days of your life.",
@@ -12,23 +12,22 @@ const InitialState = {
 
 export const modeReducers = (state = InitialState, action: any) => {
   switch (action.type) {
-    case TOGGLE_SIDEBAR:
+    case IS_PROMPT:
       return {
         ...state,
-        isSideBarOpen: !state.isSideBarOpen,
+        isPromptModal: !state.isPromptModal,
       };
 
-    case CLOSE:
+    case IS_SUCCESS:
       return {
         ...state,
-        isModalOpen: false,
-        isSideBarOpen: false,
+        isSucessModal: !state.isSucessModal,
       };
 
-    case SHOW_MODAL:
+    case CLOSE_MODAL:
       return {
         ...state,
-        isModalOpen: !state.isModalOpen,
+        isPromptModal: false,
       };
 
     default:

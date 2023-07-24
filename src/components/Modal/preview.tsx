@@ -6,10 +6,16 @@ import { FaTimes } from "react-icons/fa";
 //=> React Componnets
 import Preview from "@/components/Preview";
 
-const SucessModal = ({ setSuccess }: any) => {
+// Redux
+import { useDispatch } from "react-redux";
+import { IS_SUCCESS } from "@/store/actions/action";
+
+const SucessModal = () => {
+  const dispatch = useDispatch();
+
   // Close Prompt
   const CloseModalHandler = () => {
-    setSuccess(false);
+    dispatch({ type: IS_SUCCESS });
   };
 
   //=> Send to celebrant

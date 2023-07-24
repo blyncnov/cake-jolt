@@ -31,7 +31,7 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="btn-action">
-            <Link href="https://github.com/blyncnov/cake-jolt">
+            <Link href="https://github.com/blyncnov/cake-jolt" target="_blank">
               <button className="btn btn-primary">
                 GitHub <BiSolidStar />
               </button>

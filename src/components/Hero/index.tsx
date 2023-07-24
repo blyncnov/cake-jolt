@@ -12,10 +12,16 @@ import Confetti2 from "@/assets/confetti-2.svg";
 import Confetti3 from "@/assets/balloons.svg";
 import Confetti4 from "@/assets/garlands.svg";
 
-const Hero = ({ setWishing }: any) => {
+// Redux
+import { useDispatch } from "react-redux";
+import { IS_PROMPT } from "@/store/actions/action";
+
+const Hero = () => {
+  const dispatch = useDispatch();
+
   // Open Prompt
   const OpenModalHandler = () => {
-    setWishing(true);
+    dispatch({ type: IS_PROMPT });
   };
 
   return (
@@ -39,7 +45,10 @@ const Hero = ({ setWishing }: any) => {
               <button className="py-4 px-6 " onClick={OpenModalHandler}>
                 Send a jolt <SiGamejolt />
               </button>
-              <Link href="https://github.com/blyncnov/cake-jolt/fork">
+              <Link
+                href="https://github.com/blyncnov/cake-jolt/fork"
+                target="_blank"
+              >
                 <button className="py-4 px-6 hidden md:flex bg-[#F73776]">
                   Fork Repository
                   <TbGitFork />
