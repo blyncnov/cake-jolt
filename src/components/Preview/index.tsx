@@ -29,7 +29,7 @@ const Preview = () => {
       <div className="birthdayCard">
         <div className="cardFront">
           <div className="happy">
-            <div>A Surprise</div>
+            <div>Happy birthday!</div>
           </div>
           <div className="balloons">
             <div className="balloon-1"></div>

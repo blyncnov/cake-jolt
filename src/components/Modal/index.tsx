@@ -83,7 +83,7 @@ const CreationModal = () => {
             />
 
             <select name="category">
-              <option value="beautiful">Choose Engery</option>
+              <option value="beautiful">Choose Energy</option>
               <option value="happy">Happy</option>
               <option value="sad">Sad </option>
               <option value="lazy">Lazy </option>
