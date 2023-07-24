@@ -4,9 +4,17 @@ import Head from "next/head";
 // Redux
 import { useSelector } from "react-redux";
 
-const Preview: () => React.JSX.Element = () => {
-  // Toggle State
+const Preview = () => {
+  // Card Info
   const CardInfo = useSelector((state: any) => state.ModeReducer.CardInfo);
+
+  // Birthday Message
+  const birthday_message = useSelector(
+    (state: any) => state.ModeReducer.birthdayMessage
+  );
+
+  // Sender
+  const sender = useSelector((state: any) => state.ModeReducer.sender);
 
   return (
     <div id="card_body">
@@ -32,8 +40,8 @@ const Preview: () => React.JSX.Element = () => {
         <div className="cardInside">
           <h3 className="back">SPECIAL BIRTHDAY ❤️ </h3>
           <p className="preview_text">Heyy There,</p>
-          <p className="preview_text">{CardInfo.message}</p>
-          <p className="name">{CardInfo.sender}</p>
+          <p className="preview_text">{birthday_message}</p>
+          <p className="name">{sender}</p>
         </div>
       </div>
     </div>

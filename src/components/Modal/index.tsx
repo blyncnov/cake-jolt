@@ -1,4 +1,5 @@
 import React from "react";
+import useSWR from "swr";
 
 //=> React Icons
 import { FaTimes } from "react-icons/fa";
@@ -10,6 +11,15 @@ import { IS_PROMPT, IS_SUCCESS, CLOSE_MODAL } from "@/store/actions/action";
 
 const CreationModal = () => {
   const dispatch = useDispatch();
+
+  const fetcher = (url: string) => {
+    fetch(url).then((response) => response.json());
+  };
+
+  const { data, error, isLoading } = useSWR(
+    "https://dummyjson.com/products/1",
+    fetch
+  );
 
   //=> Generate a Wish
   const WishHandler = (e: any) => {
@@ -25,10 +35,11 @@ const CreationModal = () => {
 
     console.log(CelebrantName, Category, Prompts);
 
-    //=> Generate
-    dispatch({ type: IS_SUCCESS });
+    // Generate What i need
+    
 
-    //=> Close Modal After
+    //=> Toggle Modal After
+    dispatch({ type: IS_SUCCESS });
     dispatch({ type: IS_PROMPT });
   };
 
@@ -36,6 +47,9 @@ const CreationModal = () => {
   const CloseModalHandler = () => {
     dispatch({ type: CLOSE_MODAL });
   };
+
+  if (error) return <div>failed to load</div>;
+  if (isLoading) return <div>loading...</div>;
 
   return (
     <div className="creation_modal fixed top-0 left-0 right-0 h-full flex items-center justify-center">
