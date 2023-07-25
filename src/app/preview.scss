@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap");
+
 #card_body {
     display: flex;
     align-items: center;
@@ -18,6 +20,7 @@
     transform: perspective(2500px) rotate(5deg);
     box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
         0 10px 100px rgba(0, 0, 0, 0.5);
+    transform: rotate(4deg);
 }
 
 .birthdayCard:hover .cardFront {
@@ -171,4 +174,167 @@
     margin: 30px;
     outline-color: #333;
     outline-style: dashed;
+}
+
+
+.frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_cover {
+    width: 300px;
+    height: 500px;
+    border-radius: 4px;
+    background-color: #cdd3e1;
+    box-shadow: rgba(0, 0, 0, 0.322) -3px 0px 4px 0px;
+}
+
+.book_grid_container {
+    position: relative;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1;
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid_section:nth-child(1) {
+    position: relative;
+    width: 100%;
+    background-color: #cdd3e1 !important;
+}
+
+.balls {
+    width: 100%;
+    position: relative;
+    height: max-content;
+}
+
+.ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.ball:nth-child(1) {
+    top: 30px;
+    left: 20px;
+    background-color: #553a7f;
+}
+
+.ball:nth-child(2) {
+    top: 15px;
+    left: calc(50% - 20px);
+    background-color: #b62944;
+}
+
+.ball:nth-child(3) {
+    top: 30px;
+    right: 20px;
+    background-color: #5ec2af;
+}
+
+.ball:nth-child(4) {
+    width: 20px;
+    height: 20px;
+    top: 120px;
+    left: 30px;
+    background-color: #d5c356;
+}
+
+.ball:nth-child(5) {
+    width: 10px;
+    height: 10px;
+    top: 180px;
+    left: 20px;
+    background-color: #b62944;
+}
+
+.ball:nth-child(6) {
+    width: 35px;
+    height: 35px;
+    top: 100px;
+    left: calc(50% - 40px);
+    background-color: #a17dba;
+}
+
+.ball:nth-child(7) {
+    width: 35px;
+    height: 35px;
+    top: 180px;
+    right: 40px;
+    background-color: #d5c356;
+}
+
+.ball:nth-child(8) {
+    width: 30px;
+    height: 30px;
+    top: 120px;
+    right: 20px;
+    background-color: #8ac1d3;
+}
+
+.ball:nth-child(9) {
+    width: 10px;
+    height: 10px;
+    top: 90px;
+    right: calc(50% - 40px);
+    background-color: green;
+}
+
+.ball:nth-child(10) {
+    width: 10px;
+    height: 10px;
+    top: 120px;
+    right: 80px;
+    background-color: #b62944;
+}
+
+.grid_section:nth-child(2) {
+    position: relative;
+    width: 100%;
+    background-color: #9d79b6 !important;
+}
+
+.circular_tag {
+    top: -75px;
+    left: calc(75% - 50%);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 1em;
+    background-image: url("../assets/birthpic.webp");
+    background-color: rgb(176, 9, 167);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.circular_inner_tag {
+    width: 120px;
+    height: 120px;
+    padding: 0.3em;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    font-family: "Lovers Quarrel", cursive;
+}
+
+.birthday_word {
+    font-size: 40px;
+}
+
+.circular_inner_tag p {
+    font-size: 25px;
 }

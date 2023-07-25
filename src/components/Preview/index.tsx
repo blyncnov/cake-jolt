@@ -28,15 +28,37 @@ const Preview = () => {
 
       <div className="birthdayCard">
         <div className="cardFront">
-          <div className="happy">
-            <div>Happy birthday!</div>
-          </div>
-          <div className="balloons">
-            <div className="balloon-1"></div>
-            <div className="balloon-2"></div>
-            <div className="balloon-3"></div>
-            <div className="balloon-4"></div>
-            <div className="balloon-5"></div>
+          <div className="frame">
+            <div className="book_cover">
+              <div className="book_grid_container">
+                <div className="grid_section">
+                  <div className="balls">
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                    <div className="ball"></div>
+                  </div>
+                </div>
+                <div className="grid_section">
+                  <div className="circular_tag">
+                    <div className="circular_inner_tag">
+                      <p>
+                        Happy <br />
+                        <span className="birthday_word">Birthday</span>
+                        <br />
+                        to you
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="cardInside">
