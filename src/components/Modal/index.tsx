@@ -14,6 +14,7 @@ import {
   SET_BIRTHDAY_MESSAGE,
   SET_CELEBRANT_NAME,
 } from "@/store/actions/action";
+import cakejolts from "../../../axios.config";
 
 const CreationModal = () => {
   const dispatch = useDispatch();
@@ -39,8 +40,8 @@ const CreationModal = () => {
     });
 
     //=> Generate What i need
-    axios
-      .post("https://cakejolt.okxlogin.site/api/ask", {
+    cakejolts
+      .post("ask", {
         question: `generate birthday quote for my friend using ${Category} mood and include ${Prompts} to wish him/her`,
       })
       .then((res) => {
