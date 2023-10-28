@@ -12,6 +12,10 @@ const InitialState = {
   celebrant: "",
   birthdayMessage: "",
   sender: "Cake-Jolt",
+  gen_info: {
+    mood: "",
+    prompt: "",
+  },
 };
 
 export const modeReducers = (state = InitialState, action: any) => {
@@ -32,6 +36,7 @@ export const modeReducers = (state = InitialState, action: any) => {
       return {
         ...state,
         birthdayMessage: action.payload,
+        gen_info: action.info,
       };
 
     case SET_CELEBRANT_NAME:

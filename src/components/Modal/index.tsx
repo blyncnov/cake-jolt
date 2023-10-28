@@ -50,12 +50,13 @@ const CreationModal = () => {
         dispatch({
           type: SET_BIRTHDAY_MESSAGE,
           payload: res.data.data.answer,
+          info: res.data.data.answer,
         });
-
-        //=> Toggle Modal After
-        dispatch({ type: IS_SUCCESS });
-        dispatch({ type: IS_PROMPT });
       });
+
+    //=> Toggle Modal After
+    dispatch({ type: IS_SUCCESS });
+    dispatch({ type: IS_PROMPT });
   };
 
   //=>Close Prompt
