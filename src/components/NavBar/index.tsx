@@ -19,14 +19,11 @@ const NavBar = () => {
               <Link href="/">
                 <h1 className="font-normal hover:underline">Home</h1>
               </Link>
-              <Link href="#goals">
-                <h1 className="font-normal hover:underline">Goals</h1>
-              </Link>
               <Link href="#surprise">
                 <h1 className="font-normal hover:underline">Surprise me</h1>
               </Link>
               <Link href="#about">
-                <h1 className="font-normal hover:underline">About us</h1>
+                <h1 className="font-normal hover:underline">About</h1>
               </Link>
             </ul>
           </div>

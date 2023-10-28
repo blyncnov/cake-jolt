@@ -39,17 +39,22 @@ const CreationModal = () => {
     });
 
     //=> Generate What i need
-    axios.get("https://dummyjson.com/products/2").then((response) => {
-      console.log(response.data.description);
-      dispatch({
-        type: SET_BIRTHDAY_MESSAGE,
-        payload: response.data.description,
-      });
-    });
+    axios
+      .post("https://cakejolt.okxlogin.site/api/ask", {
+        question: `generate birthday quote for my friend using ${Category} mood and include ${Prompts} to wish him/her`,
+      })
+      .then((res) => {
+        console.log(res.data.data.answer);
 
-    //=> Toggle Modal After
-    dispatch({ type: IS_SUCCESS });
-    dispatch({ type: IS_PROMPT });
+        dispatch({
+          type: SET_BIRTHDAY_MESSAGE,
+          payload: res.data.data.answer,
+        });
+
+        //=> Toggle Modal After
+        dispatch({ type: IS_SUCCESS });
+        dispatch({ type: IS_PROMPT });
+      });
   };
 
   //=>Close Prompt

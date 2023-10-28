@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
 
 #card_body {
     display: flex;
@@ -154,7 +155,7 @@
 }
 
 .preview_text {
-    font-family: "Brush Script MT", cursive;
+    font-family: 'Dancing Script', cursive;
     margin: 40px;
     color: #333;
 }
@@ -304,7 +305,7 @@
 
 .circular_tag {
     top: -75px;
-    left: calc(75% - 50%);
+    left: calc(100% - 150px - 25%);
     position: absolute;
     width: 150px;
     height: 150px;

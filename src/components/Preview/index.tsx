@@ -63,7 +63,7 @@ const Preview = () => {
         </div>
         <div className="cardInside">
           <h3 className="back">SPECIAL BIRTHDAY ❤️ </h3>
-          <p className="preview_text">Heyy {CelebrantName},</p>
+          <p className="preview_text">Hi {CelebrantName},</p>
           <p className="preview_text">{birthday_message}</p>
           <p className="name">{sender}</p>
         </div>
